@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+}
+
+main {
+  font-size: 16px;
+  font-family: "Roboto";
+  color: hsl(235, 18%, 26%);
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5% auto;
+}
+
+/* card styles */
+#card {
+  position: relative;
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  height: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#card-img {
+  width: 100%;
+  height: 100%;
+}
+
+#card-img #mobile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: left;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+}
+
+.benefits-list {
+  list-style: circle outside url("./assets/images/icon-list.svg");
+  padding: 0;
+}
+
+.benefits-list li {
+  position: relative;
+  margin: 0.5rem 0;
+  margin-left: 2rem;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin: 6px 0;
+  border: 1px solid hsl(0, 0%, 58%, 0.5);
+  border-radius: 6px;
+  color: hsl(0, 0%, 58%);
+}
+
+label {
+  color: hsl(235, 18%, 26%);
+  font-size: 0.75rem;
+}
+
+input[type="email"]:focus {
+  border: 2px solid hsl(235, 18%, 26%);
+}
+
+input[type="email"].error {
+  border: 1px solid hsl(4, 100%, 67%);
+  color: hsl(4, 100%, 67%);
+  background-color: hsl(4, 100%, 67%, 0.2);
+}
+
+button {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  letter-spacing: 1px;
+  font-size: 600;
+  background-color: hsl(235, 18%, 26%);
+  color: hsl(0, 0%, 100%);
+  border: 0px;
+  border-radius: 6px;
+}
+
+button:hover,
+button:active {
+  background: linear-gradient(to right, hsl(4, 100%, 67%), rgb(239, 185, 85));
+  color: hsl(0, 0%, 100%);
+  border: 0px;
+  box-shadow: 0 4px 10px rgba(255, 69, 0, 0.3),
+    0 6px 20px rgba(255, 140, 0, 0.3);
+}
+
+#form-btn {
+  margin: 1rem 0;
+}
+
+#success-card {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  padding: 4rem 2rem;
+  gap: 2rem;
+}
+
+#success-img {
+  width: 4rem;
+  height: 4rem;
+}
+
+#success-title {
+  font-size: 2rem;
+}
+
+/* desktop view styles */
+@media screen and (min-width: 768px) {
+  body {
+    background-color: hsl(235, 18%, 26%);
+  }
+
+  #card {
+    width: auto;
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 20px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  #card-img,
+  #card-details {
+    flex: 1;
+    height: auto;
+  }
+
+  #card-details {
+    display: flex;
+    flex: columns;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  #card-img {
+    border-radius: 20px;
+  }
+
+  #success-card {
+    width: auto;
+    height: auto;
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 20px;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-color: hsl(0, 0%, 100%);
+  }
+}
