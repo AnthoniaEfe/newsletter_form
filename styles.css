@@ -84,6 +84,7 @@ input[type="email"] {
 label {
   color: hsl(235, 18%, 26%);
   font-size: 0.75rem;
+  font-weight: 700;
 }
 
 input[type="email"]:focus {
@@ -94,6 +95,18 @@ input[type="email"].error {
   border: 1px solid hsl(4, 100%, 67%);
   color: hsl(4, 100%, 67%);
   background-color: hsl(4, 100%, 67%, 0.2);
+}
+
+form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#error-message {
+  display: none;
+  margin: 0 1px 0 auto;
+  font-size: 0.75rem;
+  color: hsl(4, 100%, 67%);
 }
 
 button {
@@ -121,9 +134,10 @@ button:active {
 }
 
 #success-card {
+  display: none;
   height: 100vh;
   width: 100%;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: left;
   justify-content: center;
