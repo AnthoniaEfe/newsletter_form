@@ -17,7 +17,6 @@ function handleSubmit(e) {
   e.preventDefault();
 
   let email = emailInput.value.trim();
-  // emailInput.classList.remove("input-error");
 
   if (!isValidEmail(email) || email === "") {
     errorMessage.style.display = "inline-block";
@@ -34,6 +33,12 @@ form.addEventListener("submit", handleSubmit);
 
 dismissButton.addEventListener("click", (e) => {
   e.preventDefault();
+
   cardContainer.style.display = "flex";
   successCard.style.display = "none";
+
+  if (errorMessage.style.display === "inline-block") {
+    errorMessage.style.display = "none";
+    emailInput.classList.toggle("error");
+  }
 });
