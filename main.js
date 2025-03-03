@@ -5,6 +5,7 @@ const successCard = document.getElementById("success-card");
 const errorMessage = document.getElementById("error-message");
 const cardContainer = document.getElementById("card");
 const dismissButton = document.getElementById("dismiss-btn");
+const userEmail = document.getElementById("user-email");
 
 let email = emailInput.value.trim();
 
@@ -26,6 +27,8 @@ function handleSubmit(e) {
     emailInput.value = "";
     cardContainer.style.display = "none";
     successCard.style.display = "flex";
+
+    userEmail.textContent = email;
   }
 }
 
